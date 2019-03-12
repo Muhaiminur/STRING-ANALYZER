@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="yui3-js-enabled" dir="ltr" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+    <title>cse220lab-01-sp13_1: Assignment: MyString</title>
+    <link rel="shortcut icon" href="http://moodle.bracu.ac.bd/theme/image.php?theme=formfactor&amp;image=favicon&amp;rev=162&amp;component=theme">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="moodle, cse220lab-01-sp13_1: Assignment: MyString">
+<link rel="stylesheet" type="text/css" href="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo.css"><script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo_003.php"></script><script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo_004.php"></script>
+<link rel="stylesheet" type="text/css" href="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo_002.css">
+<script src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo.php" charset="utf-8" type="text/javascript" id="yui_3_2_0_1_13908142189999"></script><script src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/javascript.js" charset="utf-8" type="text/javascript" id="yui_3_2_0_1_139081421899910"></script><script src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/yui_combo_002.php" charset="utf-8" type="text/javascript" id="yui_3_2_0_1_139081421899911"></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/styles.css">
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {}; var moodleConfigFn = function(me) {var p = me.path, b = me.name.replace(/^moodle-/,'').split('-', 3), n = b.pop();if (/(skin|core)/.test(n)) {n = b.pop();me.type = 'css';};me.path = b.join('-')+'/'+n+'/'+n+'.'+me.type;}; var galleryConfigFn = function(me) {var p = me.path,v=M.yui.galleryversion,f;if(/-(skin|core)/.test(me.name)) {me.type = 'css';p = p.replace(/-(skin|core)/, '').replace(/\.js/, '.css').split('/'), f = p.pop().replace(/(\-(min|debug))/, '');if (/-skin/.test(me.name)) {p.splice(p.length,0,v,'assets','skins','sam', f);} else {p.splice(p.length,0,v,'assets', f);};} else {p = p.split('/'), f = p.pop();p.splice(p.length,0,v, f);};me.path = p.join('/');};
+M.yui.loader = {"base":"http:\/\/moodle.bracu.ac.bd\/lib\/yui\/3.2.0\/build\/","comboBase":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?","combine":true,"filter":"","insertBefore":"firstthemesheet","modules":{"yui2-event":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/event\/event-min.js"},"yui2-animation":{"type":"js","requires":["yui2-dom","yui2-event"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/animation\/animation-min.js"},"yui2-swfstore":{"type":"js","requires":["yui2-element","yui2-cookie","yui2-swf"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/swfstore\/swfstore-min.js"},"yui2-datatable":{"requires":["yui2-element","yui2-datasource"],"type":"js","optional":["yui2-calendar","yui2-dragdrop","yui2-paginator"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/datatable\/datatable-min.js"},"yui2-swfdetect":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/swfdetect\/swfdetect-min.js"},"yui2-menu":{"requires":["yui2-containercore"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/menu\/menu-min.js"},"yui2-treeview":{"requires":["yui2-event","yui2-dom"],"type":"js","optional":["yui2-json","yui2-animation","yui2-calendar"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/treeview\/treeview-min.js"},"yui2-get":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/get\/get-min.js"},"yui2-progressbar":{"requires":["yui2-element"],"type":"js","optional":["yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/progressbar\/progressbar-min.js"},"yui2-uploader":{"type":"js","requires":["yui2-element"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/uploader\/uploader-min.js"},"yui2-datasource":{"requires":["yui2-event"],"type":"js","optional":["yui2-connection"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/datasource\/datasource-min.js"},"yui2-profiler":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/profiler\/profiler-min.js"},"yui2-connection":{"supersedes":["yui2-connectioncore"],"requires":["yui2-event"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/connection\/connection-min.js"},"yui2-json":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/json\/json-min.js"},"yui2-datemath":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/datemath\/datemath-min.js"},"yui2-calendar":{"supersedes":["yui2-datemath"],"requires":["yui2-event","yui2-dom"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/calendar\/calendar-min.js"},"yui2-simpleeditor":{"requires":["yui2-element"],"type":"js","optional":["yui2-containercore","yui2-menu","yui2-button","yui2-animation","yui2-dragdrop"],"pkg":"editor","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/editor\/simpleeditor-min.js"},"yui2-swf":{"supersedes":["yui2-swfdetect"],"requires":["yui2-element"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/swf\/swf-min.js"},"yui2-event-simulate":{"type":"js","requires":["yui2-event"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/event-simulate\/event-simulate-min.js"},"yui2-yuiloader-dom-event":{"supersedes":["yui2-yahoo","yui2-dom","yui2-event","yui2-get","yui2-yuiloader","yui2-yahoo-dom-event"],"rollup":5,"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/yuiloader-dom-event\/yuiloader-dom-event.js"},"yui2-storage":{"requires":["yui2-yahoo","yui2-event","yui2-cookie"],"type":"js","optional":["yui2-swfstore"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/storage\/storage-min.js"},"yui2-container":{"supersedes":["yui2-containercore"],"requires":["yui2-dom","yui2-event"],"type":"js","optional":["yui2-dragdrop","yui2-animation","yui2-connection"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/container\/container-min.js"},"yui2-profilerviewer":{"requires":["yui2-profiler","yui2-yuiloader","yui2-element"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/profilerviewer\/profilerviewer-min.js"},"yui2-imagecropper":{"requires":["yui2-dragdrop","yui2-element","yui2-resize"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/imagecropper\/imagecropper-min.js"},"yui2-paginator":{"requires":["yui2-element"],"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/paginator\/paginator-min.js"},"yui2-tabview":{"requires":["yui2-element"],"type":"js","optional":["yui2-connection"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/tabview\/tabview-min.js"},"yui2-layout":{"requires":["yui2-element"],"type":"js","optional":["yui2-animation","yui2-dragdrop","yui2-resize","yui2-selector"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/layout\/layout-min.js"},"yui2-imageloader":{"type":"js","requires":["yui2-event","yui2-dom"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/imageloader\/imageloader-min.js"},"yui2-containercore":{"requires":["yui2-dom","yui2-event"],"type":"js","pkg":"container","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/container\/container_core-min.js"},"yui2-event-mouseenter":{"type":"js","requires":["yui2-dom","yui2-event"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/event-mouseenter\/event-mouseenter-min.js"},"yui2-logger":{"requires":["yui2-event","yui2-dom"],"type":"js","optional":["yui2-dragdrop"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/logger\/logger-min.js"},"yui2-cookie":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/cookie\/cookie-min.js"},"yui2-stylesheet":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/stylesheet\/stylesheet-min.js"},"yui2-connectioncore":{"requires":["yui2-event"],"type":"js","pkg":"connection","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/connection\/connection_core-min.js"},"yui2-utilities":{"supersedes":["yui2-yahoo","yui2-event","yui2-dragdrop","yui2-animation","yui2-dom","yui2-connection","yui2-element","yui2-yahoo-dom-event","yui2-get","yui2-yuiloader","yui2-yuiloader-dom-event"],"rollup":8,"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/utilities\/utilities.js"},"yui2-dragdrop":{"type":"js","requires":["yui2-dom","yui2-event"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/dragdrop\/dragdrop-min.js"},"yui2-colorpicker":{"requires":["yui2-slider","yui2-element"],"type":"js","optional":["yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/colorpicker\/colorpicker-min.js"},"yui2-event-delegate":{"requires":["yui2-event"],"type":"js","optional":["yui2-selector"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/event-delegate\/event-delegate-min.js"},"yui2-yuiloader":{"type":"js","supersedes":["yui2-yahoo","yui2-get"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/yuiloader\/yuiloader-min.js"},"yui2-button":{"requires":["yui2-element"],"type":"js","optional":["yui2-menu"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/button\/button-min.js"},"yui2-resize":{"requires":["yui2-dragdrop","yui2-element"],"type":"js","optional":["yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/resize\/resize-min.js"},"yui2-element":{"requires":["yui2-dom","yui2-event"],"type":"js","optional":["yui2-event-mouseenter","yui2-event-delegate"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/element\/element-min.js"},"yui2-history":{"type":"js","requires":["yui2-event"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/history\/history-min.js"},"yui2-yahoo":{"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/yahoo\/yahoo-min.js"},"yui2-element-delegate":{"type":"js","requires":["yui2-element"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/element-delegate\/element-delegate-min.js"},"yui2-charts":{"type":"js","requires":["yui2-element","yui2-json","yui2-datasource","yui2-swf"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/charts\/charts-min.js"},"yui2-slider":{"requires":["yui2-dragdrop"],"type":"js","optional":["yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/slider\/slider-min.js"},"yui2-selector":{"type":"js","requires":["yui2-yahoo","yui2-dom"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/selector\/selector-min.js"},"yui2-yuitest":{"requires":["yui2-logger"],"type":"js","optional":["yui2-event-simulate"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/yuitest\/yuitest-min.js"},"yui2-carousel":{"requires":["yui2-element"],"type":"js","optional":["yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/carousel\/carousel-min.js"},"yui2-autocomplete":{"requires":["yui2-dom","yui2-event","yui2-datasource"],"type":"js","optional":["yui2-connection","yui2-animation"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/autocomplete\/autocomplete-min.js"},"yui2-yahoo-dom-event":{"supersedes":["yui2-yahoo","yui2-event","yui2-dom"],"rollup":3,"type":"js","fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/yahoo-dom-event\/yahoo-dom-event.js"},"yui2-dom":{"type":"js","requires":["yui2-yahoo"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/dom\/dom-min.js"},"yui2-editor":{"supersedes":["yui2-simpleeditor"],"requires":["yui2-menu","yui2-element","yui2-button"],"type":"js","optional":["yui2-animation","yui2-dragdrop"],"fullpath":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?2.8.2\/build\/editor\/editor-min.js"},"core_filepicker":{"name":"core_filepicker","fullpath":"http:\/\/moodle.bracu.ac.bd\/lib\/javascript.php?file=%2Frepository%2Ffilepicker.js&rev=161","requires":["base","node","node-event-simulate","json","async-queue","io","yui2-button","yui2-container","yui2-layout","yui2-menu","yui2-treeview","yui2-dragdrop","yui2-cookie"]},"core_dock":{"name":"core_dock","fullpath":"http:\/\/moodle.bracu.ac.bd\/lib\/javascript.php?file=%2Fblocks%2Fdock.js&rev=161","requires":["base","node","event-custom","event-mouseenter","event-resize"]}},"groups":{"moodle":{"name":"moodle","base":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?moodle\/161\/","comboBase":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?","combine":true,"filter":"","ext":false,"root":"moodle\/161\/","patterns":{"moodle-":{"group":"moodle","configFn":moodleConfigFn},"root":"moodle"}},"local":{"name":"gallery","base":"http:\/\/moodle.bracu.ac.bd\/lib\/yui\/gallery\/","comboBase":"http:\/\/moodle.bracu.ac.bd\/theme\/yui_combo.php?","combine":true,"filter":"","ext":false,"root":"gallery\/","patterns":{"gallery-":{"group":"gallery","configFn":galleryConfigFn},"root":"gallery"}}}};
+M.cfg = {"wwwroot":"http:\/\/moodle.bracu.ac.bd","sesskey":"7dHmTOjmwM","loadingicon":"http:\/\/moodle.bracu.ac.bd\/theme\/image.php?theme=formfactor&image=i%2Floading_small&rev=162","themerev":"162","theme":"formfactor","jsrev":"161"};
+//]]>
+</script>
+<script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/javascript_002.js"></script>
+<script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/javascript_002.php"></script>
+</head>
+<body id="page-mod-assignment-view" class=" path-mod path-mod-assignment gecko dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-bracu-ac-bd pagelayout-incourse course-208 context-7511 cmid-3502 category-9 side-pre-only jsenabled">
+<div class="skiplinks"><a class="skip" href="#maincontent">Skip to main content</a></div>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<div id="page">
+
+
+    <div id="page-header" class="clearfix">
+		<div id="page-header-wrapper">
+
+	        		    	<h1 class="headermain">CSE 220: Data Structures Lab (Spring '13)  </h1>
+    		    <div class="headermenu">
+        			<div class="logininfo">You are currently using guest access (<a href="https://moodle.bracu.ac.bd/login/index.php">Login</a>)</div>	        	</div>
+	        
+	    </div>
+    </div>
+
+                  <ul id="page-navigation" class="clearfix">
+          <li>&nbsp;</li>
+        </ul>
+      	
+    	    <div class="navbar clearfix">
+    	    <div class="breadcrumb"><span class="accesshide">Page path</span><ul><li><a title="Home" href="http://moodle.bracu.ac.bd/">Home</a></li><li> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">►</span> <span>Courses</span></li><li> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">►</span> <a title="Spring 2013 " href="http://moodle.bracu.ac.bd/course/category.php?id=9">Spring 2013 </a></li><li> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">►</span> <a title="CSE 220: Data Structures Lab (Spring '13)  " href="http://moodle.bracu.ac.bd/course/view.php?id=208">cse220lab-01-sp13_1</a></li><li> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">►</span> <span>Data Structures Lab 02</span></li><li> <span class="accesshide "><span class="arrow_text">/</span>&nbsp;</span><span class="arrow sep">►</span> <a title="Assignment" href="http://moodle.bracu.ac.bd/mod/assignment/view.php?id=3502">MyString</a></li></ul></div>
+            <div class="navbutton"> </div>
+        </div>
+    
+<!-- END OF HEADER -->
+
+<div id="page-content-wrapper">
+    <div id="page-content">
+        <div id="region-main-box">
+            <div id="region-post-box">
+
+                <div id="region-main-wrap">
+                    <div id="region-main">
+                        <div class="region-content">
+                            <span id="maincontent"></span><div class="groupselector">Visible groups: All participants</div><div class="reportlink"></div><div class="clearer"></div><div id="intro" class="box generalbox boxaligncenter"><div class="no-overflow"><p align="center"><st1:st1:st1:st1:st1:st1:st1:place><st1:st1:st1:st1:st1:st1:st1:placename><b>BRAC</b></st1:st1:st1:st1:st1:st1:st1:placename><b> <st1:st1:st1:st1:st1:st1:st1:placetype>University</st1:st1:st1:st1:st1:st1:st1:placetype></b></st1:st1:st1:st1:st1:st1:st1:place><b> </b></p>
+<p align="center"><b>Department of Computer Science and Engineering</b></p>
+<p><b> </b></p>
+<p align="center"><b>CSE 220: Data Structures</b></p>
+<p align="center"><b>Lab 02</b></p>
+<p><b><span style="text-decoration: underline;">Task 1</span></b></p>
+<p>&nbsp;</p>
+<p>Implement a <b>MyString</b> ADT.</p>
+<p>&nbsp;</p>
+<p><b>Elements</b></p>
+<p>&nbsp;</p>
+<p>An empty array of characters.</p>
+<p>&nbsp;</p>
+<p><b>Structure of the Elements</b></p>
+<p>&nbsp;</p>
+<p>A collection of characters. The characters in a string are in 
+sequential (or linear) order – that is, the characters follow one after 
+the other from the beginning of a string to its end. The character 
+positions are numbered beginning with zero. A word, phrase, or sentence 
+is some examples of strings.</p>
+<p>&nbsp;</p>
+<p>The characters in the instance of MyString will be stored in an array.</p>
+<p>&nbsp;</p>
+<p><b><span style="text-decoration: underline;">CONSTRUCTORS</span></b></p>
+<p>&nbsp;</p>
+<p><b>MyString ( )</b></p>
+<p><b> </b></p>
+<p>Precondition:</p>
+<p>None.</p>
+<p><b> </b></p>
+<p>Postcondition:</p>
+<p>This is the default constructor. It creates an empty MyString object (just a MyString reference).</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p>... main ( ){</p>
+<p>...</p>
+<p>MyString a = new MyString( );</p>
+<p>...</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b>MyString (char[ ] charSeq)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>An array of characters charSeq will be given to create the constructor.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>It creates a new MyString object with a character sequence identical to the character array charSeq.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p>... main ( ){</p>
+<p>...</p>
+<p>MyString a = new MyString(c); // c is a character array</p>
+<p>...</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p><b>MyString (String str)</b></p>
+<p><b> </b></p>
+<p>Precondition:</p>
+<p>A String str will be given to create the constructor.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>This creates a new MyString object whose contents are equivalent to the String str.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p>... main ( ){</p>
+<p>...</p>
+<p>&nbsp;</p>
+<p>MyString a = new MyString(“cat”);</p>
+<p>...</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p><b><span style="text-decoration: underline;">METHODS </span></b></p>
+<p><b> </b></p>
+<p><b>[Some of the more commonly used String class methods-but you <span style="text-decoration: underline;">CANNOT</span> use the String class methods here. You have to implement these methods on your own.]</b></p>
+<p>&nbsp;</p>
+<p><b>int length ( )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>None.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the number of characters in the MyString object.</p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b>char charAt ( int n )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>“<i>n</i>” must be a valid String index (which is an integer) less 
+than the length of the MyString object where you invoke this method 
+(check the validity for <i>n</i>, e. g., <i>n</i> is an integer, non-negative and less than the length of the String).</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the <i>n</i><sup>th</sup> character in the MySrting object.</p>
+<p><b> </b></p>
+<p><b>boolean startsWith (MyString prefix) </b></p>
+<p><br> Precondition:</p>
+<p>A MyString object <i>prefix</i> that is not null.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns true if the MyString object starts with “<i>prefix</i>”. Otherwise, returns false.</p>
+<p>&nbsp;</p>
+<p><b>boolean startsWith (String prefix) </b></p>
+<p><br> Precondition:</p>
+<p>A String object <i>prefix</i> that is not null.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns true if the MyString object starts with “<i>prefix</i>”. Otherwise, returns false.</p>
+<p>&nbsp;</p>
+<p><b>boolean endsWith(MyString suffix) </b></p>
+<p><br> Precondition:</p>
+<p>A MyString object <i>suffix</i> that is not null.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns true if the MyString object ends with “<i>suffix</i>”. Otherwise, returns false.</p>
+<p><b> </b></p>
+<p><b>boolean endsWith(String suffix) </b></p>
+<p><br> Precondition:</p>
+<p>A String object <i>suffix</i> that is not null.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns true if the MyString object ends with “<i>suffix</i>”. Otherwise, returns false.</p>
+<p><b> </b></p>
+<p><b>MyString replaceFirst(char oldChar, char newChar)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>Two valid characters “<i>oldChar</i>” and “<i>newChar</i>”.</p>
+<p>Postcondition:</p>
+<p>&nbsp;</p>
+<p>Returns a new MyString resulting from replacing the first occurrence of the <i>oldChar</i> in this string with the <i>newChar</i>.<b> </b></p>
+<p><b> </b></p>
+<p><b>MyString replaceAll(char oldChar, char newChar)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>Two valid characters “<i>oldChar</i>” and “<i>newChar</i>”.</p>
+<p><br> Postcondition:</p>
+<p>&nbsp;</p>
+<p>Returns a new MyString resulting from replacing all occurrences of the <i>oldChar</i> in this string with the <i>newChar</i>.<b> </b></p>
+<p><b> </b></p>
+<p><b>MyString replaceLast(char oldChar, char newChar)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>Two valid characters “<i>oldChar</i>” and “<i>newChar</i>”.</p>
+<p><br> Postcondition:</p>
+<p>&nbsp;</p>
+<p>Returns a new MyString resulting from replacing the last occurrence of the <i>oldChar</i> in this string with the <i>newChar</i>.<b> </b></p>
+<p><b> </b></p>
+<p><b>MyString toLowerCase ( )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>None.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the invoking MyString object if all its characters are 
+already lowercase. Otherwise, returns a new MyString object in which all
+ characters have been converted to lowercase.</p>
+<p>&nbsp;</p>
+<p><b>MyString toUpperCase ( )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>None.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the invoking MyString object if all its characters are 
+already uppercase. Otherwise, returns a new String object in which all 
+characters have been converted to uppercase.</p>
+<p><b> </b></p>
+<p><b> </b></p>
+<p><b>boolean equals ( MyString rightStr )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyString object <i>rightStr</i> and <i>rightStr</i> is not null. (check validity of <i>rightStr</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>It returns true if the invoking MyString object and rightStr have the same value (i.e, identical). Otherwise, returns false.</p>
+<p>&nbsp;</p>
+<p><b>boolean equalsIgnoreCase ( MyString rightString )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyString object <i>rightStr</i> and <i>rightStr</i> is not null. (check validity of <i>rightStr</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>It returns true if the invoking MyString object and <i>rightString</i> are identical not considering the case (uppercase or lowercase) to each character. Otherwise, returns false.</p>
+<p><b> </b></p>
+<p><b>int compareTo ( MyString str )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyString object <i>str</i>. <i>Str</i> is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a value indicating if the invoking MyString object is 
+lexicographically before (returns a negative value), equal to (returns 
+0), or after (returns a positive value) the MyString str.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p>... main ( ){</p>
+<p>...</p>
+<p>&nbsp;</p>
+<p>a.MyString(b); // a and b are instances of MyString Class</p>
+<p>...</p>
+<p>}</p>
+<p>&nbsp;</p>
+<p>[This method returns 0 if a and b are identical, returns negative value if a&lt;b and returns positive value if a &gt; b.]</p>
+<p><b> </b></p>
+<p><b>int compareTo (String str )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A String object <i>str</i> and <i>Str</i> is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a value indicating if the invoking MyString object is 
+lexicographically before (returns a negative value), equal to (returns 
+0), or after (returns a positive value) the String str.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>... main ( ){</p>
+<p>...</p>
+<p>a.MyString(“book”); // a is an instances of MyString Class</p>
+<p>...</p>
+<p>}</p>
+<p><b> </b></p>
+<p><b>int compareToIgnoreCase(MyString str) </b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyString object <i>str</i> where <i>str</i> not null (check validity of <i>str</i>).</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a value indicating if the invoking MyString object is 
+lexicographically before (returns a negative value), equal to (returns 
+0), or after (returns a positive value) the MyString <i>str</i>, if both are not case sensitive.</p>
+<p><b> </b></p>
+<p><b>int compareToIgnoreCase(String str) </b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A String object <i>str</i> where <i>str</i> not null (check validity of <i>str</i>).</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a value indicating if the invoking MyString object is 
+lexicographically before (returns a negative value), equal to (returns 
+0), or after (returns a positive value) the String <i>str</i>, if both are not case sensitive.</p>
+<p><b> </b></p>
+<p><b>MyString substring (int start)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>The argument “<i>start</i>” must be a nonnegative String index and is not greater than the length of the MyString object.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a new MyString object containing the substring from the index “<i>start</i>” to the end of the invioking MyString object.</p>
+<p>&nbsp;</p>
+<p><b>MyString substring (int start, int end)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>The “<i>start</i>” and “<i>end</i>” must be nonnegative String indices and are not greater than the length of the MyString. Moreover, “<i>start”</i> must not be greater than “<i>end”</i>. (check validity)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns a new MyString object containing the substring starting at position “<i>start</i>” through position “<i>end</i>” of the invoking MyString object. [Here, a total of “<i>end</i> – <i>start</i> + 1” characters are copied into the new MyString object].</p>
+<p><b> </b></p>
+<p><b>int indexOf (char ch)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A character “<i>ch</i>”, where “<i>ch</i>” is not null. (check validity of “ch”)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the first (the leftmost) occurrence of the character “<i>ch</i>” is located. If “<i>ch</i>” is not found, -1 is returned.</p>
+<p>&nbsp;</p>
+<p><b>int lastIndexOf (char ch)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A character “<i>ch</i>”, where “<i>ch</i>” is not null. (check validity of “<i>ch</i>”)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the index within this Mystring object of the last (rightmost)
+ occurrence of the specified character “ch”. If “ch” is not found, -1 is
+ returned.</p>
+<p><b> </b></p>
+<p><b>int indexOf ( char ch, int start )</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A character “<i>ch</i>”, where “<i>ch</i>” is not null. (check validity of “<i>ch</i>”) and the starting position “<i>start</i>” to start searching within the MyString object.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the first (the leftmost) occurrence of the character “<i>ch</i>” is located, with “start” specifying the position at which to begin the search. If “<i>ch</i>” is not found, then -1 is returned.</p>
+<p>&nbsp;</p>
+<p><b>int lastIndexOf (char ch, int start)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A character “<i>ch</i>”, where “<i>ch</i>” is not null. (check validity of “<i>ch</i>”) and the starting position “<i>start</i>” to start searching within the MyString object.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>&nbsp;</p>
+<p>Returns the index within this string of the last occurrence of the specified character, searching from the position “<i>start</i>”. If “<i>ch</i>” is not found, -1 is returned.</p>
+<p><b> </b></p>
+<p><b>int indexOf ( MyString str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyStrjng object <i>str</i> that is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the
+ first (the leftmost) occurrence of the MyString str is located. If “<i>str</i>” is not found, then -1 is returned.</p>
+<p>&nbsp;</p>
+<p><b>int lastIndexOf (MyString str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyStrjng object <i>str</i> that is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the
+ last (the righttmost) occurrence of the MyString str is located. If “<i>str</i>” is not found, -1 is returned.</p>
+<p>&nbsp;</p>
+<p><b>int indexOf (String str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A Strjng object <i>str</i> that is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the first (the leftmost) occurrence of the String <i>str</i> is located. If “<i>str</i>” is not found, then -1 is returned.</p>
+<p><b> </b></p>
+<p><b>int lastIndexOf (String str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A Strjng object <i>str</i> that is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>Returns the position within the invoking MyString object at which the last (the rightmost) occurrence of the String <i>str</i> is located. If “<i>str</i>” is not found, -1 is returned.</p>
+<p><b> </b></p>
+<p><b>MyString concat (MyString str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A MyString object <i>str</i>. The object <i>str</i> is not null (check validity of <i>str</i>).</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>&nbsp;</p>
+<p>This Returns a new MyString object that containins the MyString object that invoked this method with <i>str</i>, added to it at the end.</p>
+<p>&nbsp;</p>
+<p>Example:</p>
+<p>&nbsp;</p>
+<p>string1.concat(string2);</p>
+<p>// string 1 and string2 are instances of MyString class.</p>
+<p><b> </b></p>
+<p><b>MyString concat (char[ ] charSeq)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A character array.</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>&nbsp;</p>
+<p>This Returns a new MyString object that containins the MyString object that invoked this method with <i>charSeq</i>, added to it at the end.</p>
+<p>&nbsp;</p>
+<p><b>MyString concat (String str)</b></p>
+<p>&nbsp;</p>
+<p>Precondition:</p>
+<p>A String <i>str</i>. The object <i>str</i> is not null. (check validity of <i>str</i>)</p>
+<p>&nbsp;</p>
+<p>Postcondition:</p>
+<p>&nbsp;</p>
+<p>This Returns a new MyString object that containins the MyString object that invoked this method with a string <i>str</i>, added to it at the end.</p></div></div><div id="dates" class="box generalbox boxaligncenter"><table><tbody><tr><td class="c0">Available from:</td>    <td class="c1">Friday, 16 May 2014, 02:00 PM</td></tr><tr><td class="c0">Due date:</td>    <td class="c1">Friday, 23 May 2014, 01:55 PM</td></tr></tbody></table></div>                        </div>
+                    </div>
+                </div>
+
+                                <div id="region-pre">
+                    <div class="region-content">
+                        <a href="#sb-1" class="skip-block">Skip Navigation</a><div id="inst4" class="block_navigation  block"><div class="header"><div id="yui_3_2_0_1_1390814218999976" class="title"><div class="block_action"><img src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_004.gif" class="block-hider-hide" alt="Hide Navigation block" title="Hide Navigation block"><img src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image.gif" class="block-hider-show" alt="Show Navigation block" title="Show Navigation block"></div><h2>Navigation</h2></div></div><div class="content"><ul class="block_tree list"><li class="type_unknown depth_1 contains_branch"><p class="tree_item branch navigation_node"><a title="Home" href="http://moodle.bracu.ac.bd/">Home</a></p><ul><li class="type_course depth_2 collapsed contains_branch"><p class="tree_item branch"><span title="BRAC University Courses">Site pages</span></p><ul><li class="type_custom depth_3 item_with_icon"><p class="tree_item leaf hasicon"><a title="Tags" href="http://moodle.bracu.ac.bd/tag/search.php"><img alt="moodle" class="smallicon navicon" title="moodle" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_002.png">Tags</a></p></li></ul></li>
+<li class="type_system depth_2 contains_branch"><p class="tree_item branch canexpand"><span>Courses</span></p><ul><li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_1"><span title="MPH COURSES">MPH COURSES</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_2"><span title="Spring 2014">Spring 2014</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_3"><span title="Fall  2013">Fall  2013</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_4"><span title="Summer 2013">Summer 2013</span></p></li>
+<li class="type_category depth_3 contains_branch"><p class="tree_item branch canexpand"><span title="Spring 2013 ">Spring 2013 </span></p><ul><li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_5"><a title="ANT 101: Introduction to Anthropology (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=203">ant101-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_6"><a title="CSE 161: Computer Programming (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=204">cse161-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_7"><a title="CSE 220: Data Structures (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=179">cse220-01-sp13</a></p></li>
+<li class="type_course depth_4 contains_branch"><p class="tree_item branch canexpand"><a title="CSE 220: Data Structures Lab (Spring '13)  " href="http://moodle.bracu.ac.bd/course/view.php?id=208">cse220lab-01-sp13_1</a></p><ul><li class="type_unknown depth_5 item_with_icon"><p class="tree_item leaf hasicon"><span><img alt="moodle" class="smallicon navicon" title="moodle" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_002.png">Participants</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_8"><span>General</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_9"><span>Data Structures Lab 01</span></p></li>
+<li class="type_structure depth_5 contains_branch"><p class="tree_item branch"><span>Data Structures Lab 02</span></p><ul><li class="type_activity depth_6 item_with_icon current_branch"><p class="tree_item leaf hasicon active_tree_node"><a title="Assignment" href="http://moodle.bracu.ac.bd/mod/assignment/view.php?id=3502"><img alt="Assignment" class="smallicon navicon" title="Assignment" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_003.gif">MyString</a></p></li></ul></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_10"><span>Data Structures Lab 03</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_11"><span>Data Structures Lab 04</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_12"><span>Data Structures Lab 05</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_13"><span>Data Structures Lab 06</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_14"><span>Data Structures Lab 07</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_15"><span>Data Structures Lab 08</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_16"><span>Data Structures Lab 09</span></p></li>
+<li class="type_structure depth_5 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_17"><span>Data Structures Lab 10</span></p></li></ul></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_18"><a title="CSE 221: Algorithms (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=188">cse221-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_19"><a title="CSE 221: Algorithms Lab (Spring '13) " href="http://moodle.bracu.ac.bd/course/view.php?id=189">cse221lab-01-fa13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_20"><a title="CSE 230: Discrete Mathematics (Section 1 &amp; Section 2;Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=191">cse230-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_21"><a title="CSE 260: Digital Logic Design  (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=195">cse260-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_22"><a title="CSE 320/EEE 361: Data Communications (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=196">cse320-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_23"><a title="CSE 331: Automata and Computability (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=190">cse331-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_24"><a title="CSE 360: Computer Interfacing Lab (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=199">cse360lab-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_25"><a title="CSE 391: Programming for the Internet  ( Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=200">cse391-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_26"><a title="CSE 421/EEE 465: Computer Networks (Spring '13)) " href="http://moodle.bracu.ac.bd/course/view.php?id=197">cse421-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_27"><a title="CSE 461/EEE 413/EEE 414: Digital System Design (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=201">cse461-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_28"><a title="CSE 470: Software Engineering (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=192">cse470-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_29"><a title="CSE 471: System analysis and design ( Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=193">cse471-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_30"><a title="CSE 471: System analysis and design Lab (Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=194">cse471lab-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_31"><a title="CSE 490/EEE 453: Special Topics: WAN Routing and Technologies (Spring '13) " href="http://moodle.bracu.ac.bd/course/view.php?id=198">cse490-01-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_32"><a title="ECO 101: Introduction to Microeconomics (Section 3 &amp; Section 4; Spring '13) " href="http://moodle.bracu.ac.bd/course/view.php?id=218">eco101-03-sp13</a></p></li>
+<li class="type_course depth_4 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_33"><a title="ECO 102: Introduction to Macroeconomics (Section 3 &amp; Section 4;Spring '13)" href="http://moodle.bracu.ac.bd/course/view.php?id=219">eco102-03-sp13</a></p></li>
+<li class="type_setting depth_4 item_with_icon"><p class="tree_item leaf hasicon"><a title="View all courses" href="http://moodle.bracu.ac.bd/course/category.php?id=9"><img alt="moodle" class="smallicon navicon" title="moodle" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_002.png">View all courses</a></p></li></ul></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_34"><span title="Fall 2012">Fall 2012</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_35"><span title="Summer 2012">Summer 2012</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_36"><span title="Spring 2012">Spring 2012</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_37"><span title="Fall 2011">Fall 2011</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_38"><span title="Summer 2011">Summer 2011</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_39"><span title="Miscellaneous">Miscellaneous</span></p></li>
+<li class="type_category depth_3 collapsed contains_branch"><p class="tree_item branch" id="expandable_branch_40"><span title="Sandbox">Sandbox</span></p></li></ul></li></ul></li></ul></div></div><span id="sb-1" class="skip-block-to"></span><a href="#sb-2" class="skip-block">Skip Settings</a><div id="inst5" class="block_settings  block"><div class="header"><div id="yui_3_2_0_1_1390814218999996" class="title"><div class="block_action"><img src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_004.gif" class="block-hider-hide" alt="Hide Settings block" title="Hide Settings block"><img src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image.gif" class="block-hider-show" alt="Show Settings block" title="Show Settings block"></div><h2>Settings</h2></div></div><div class="content"><div id="settingsnav" class="box block_tree_box"><ul class="block_tree list"><li class="type_unknown contains_branch"><p class="tree_item branch root_node"><span>Assignment administration</span></p><ul><li class="type_custom collapsed item_with_icon"><p class="tree_item leaf"><a title="Notes" href="http://moodle.bracu.ac.bd/mod/assignment/upload.php?id=3502&amp;action=editnotes&amp;sesskey=7dHmTOjmwM"><img alt="moodle" class="smallicon navicon" title="moodle" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_002.png">Notes</a></p></li></ul></li>
+<li class="type_course collapsed contains_branch"><hr><p class="tree_item branch root_node"><span>Course administration</span></p><ul><li class="type_setting collapsed item_with_icon"><p class="tree_item leaf"><a title="Enrol me in this course" href="http://moodle.bracu.ac.bd/enrol/index.php?id=208"><img alt="" class="smallicon navicon" title="" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image_002.gif">Enrol me in this course</a></p></li></ul></li></ul></div></div></div><span id="sb-2" class="skip-block-to"></span>                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- START OF FOOTER -->
+        <div id="page-footer" class="clearfix">
+        <p class="helplink"></p>
+        <div class="logininfo">You are currently using guest access (<a href="https://moodle.bracu.ac.bd/login/index.php">Login</a>)</div><div class="homelink"><a href="http://moodle.bracu.ac.bd/course/view.php?id=208">cse220lab-01-sp13_1</a></div>    </div>
+    </div>
+<script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/javascript_003.js"></script>
+<script type="text/javascript" src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/javascript.php"></script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"repository":{"add":"Add","back":"&laquo; Back","close":"Close","cleancache":"Clean my cache files","copying":"Copying","date":"Date","downloadsucc":"The file has been downloaded successfully","emptylist":"Empty list","error":"An unknown error occurred!","federatedsearch":"Federated search","filenotnull":"You must select a file to upload.","getfile":"Select this file","iconview":"View as icons","invalidjson":"Invalid JSON string","linkexternal":"Link external","listview":"View as list","loading":"Loading...","login":"Login","logout":"Logout","noenter":"Nothing entered","noresult":"No search result","manageurl":"Manage","popup":"Click \"Login\" button to login","preview":"Preview","refresh":"Refresh","save":"Save","saveas":"Save as","saved":"Saved","saving":"Saving","search":"Search","searching":"Search in","size":"Size","submit":"Submit","sync":"Sync","title":"Choose a file...","upload":"Upload this file","uploading":"Uploading...","xhtmlerror":"You are probably using XHTML strict header, some YUI Component doesn't work in this mode, please turn it off in moodle","chooselicense":"Choose license","author":"Author","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","norepositoriesexternalavailable":"Sorry, none of your current repositories can return external files.","nofilesattached":"No files attached","filepicker":"File picker","nofilesavailable":"No files available"},"moodle":{"cancel":"Cancel","help":"Help","ok":"OK","error":"Error","info":"Information","viewallcourses":"View all courses","yes":"Yes"},"block":{"addtodock":"Move this to the dock","undockitem":"Undock this item","undockall":"Undock all"},"langconfig":{"thisdirectionvertical":"btt"},"admin":{"confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var navtreeexpansions4 = [{"id":"expandable_branch_1","key":"13","type":10},{"id":"expandable_branch_2","key":"12","type":10},{"id":"expandable_branch_3","key":"11","type":10},{"id":"expandable_branch_4","key":"10","type":10},{"id":"expandable_branch_5","key":"203","type":20},{"id":"expandable_branch_6","key":"204","type":20},{"id":"expandable_branch_7","key":"179","type":20},{"id":"expandable_branch_8","key":"2839","type":30},{"id":"expandable_branch_9","key":"2840","type":30},{"id":"expandable_branch_10","key":"2842","type":30},{"id":"expandable_branch_11","key":"2843","type":30},{"id":"expandable_branch_12","key":"2844","type":30},{"id":"expandable_branch_13","key":"2845","type":30},{"id":"expandable_branch_14","key":"2846","type":30},{"id":"expandable_branch_15","key":"2847","type":30},{"id":"expandable_branch_16","key":"2848","type":30},{"id":"expandable_branch_17","key":"2849","type":30},{"id":"expandable_branch_18","key":"188","type":20},{"id":"expandable_branch_19","key":"189","type":20},{"id":"expandable_branch_20","key":"191","type":20},{"id":"expandable_branch_21","key":"195","type":20},{"id":"expandable_branch_22","key":"196","type":20},{"id":"expandable_branch_23","key":"190","type":20},{"id":"expandable_branch_24","key":"199","type":20},{"id":"expandable_branch_25","key":"200","type":20},{"id":"expandable_branch_26","key":"197","type":20},{"id":"expandable_branch_27","key":"201","type":20},{"id":"expandable_branch_28","key":"192","type":20},{"id":"expandable_branch_29","key":"193","type":20},{"id":"expandable_branch_30","key":"194","type":20},{"id":"expandable_branch_31","key":"198","type":20},{"id":"expandable_branch_32","key":"218","type":20},{"id":"expandable_branch_33","key":"219","type":20},{"id":"expandable_branch_34","key":"8","type":10},{"id":"expandable_branch_35","key":"7","type":10},{"id":"expandable_branch_36","key":"6","type":10},{"id":"expandable_branch_37","key":"5","type":10},{"id":"expandable_branch_38","key":"2","type":10},{"id":"expandable_branch_39","key":"1","type":10},{"id":"expandable_branch_40","key":"4","type":10}];
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+YUI(M.yui.loader).use('node', function(Y) {
+M.util.load_flowplayer();
+setTimeout("fix_column_widths()", 20);
+M.yui.galleryversion="2010.04.08-12-35";Y.use("core_dock","moodle-block_navigation-navigation",function() {M.block_navigation.init_add_tree({"id":"4","instance":"4","candock":false,"courselimit":"20","expansionlimit":0});
+})
+M.yui.galleryversion="2010.04.08-12-35";Y.use("core_dock","moodle-block_navigation-navigation",function() {M.block_navigation.init_add_tree({"id":"5","instance":"5","candock":false});
+})
+M.util.init_block_hider(Y, {"id":"inst4","title":"Navigation","preference":"block4hidden","tooltipVisible":"Hide Navigation block","tooltipHidden":"Show Navigation block"});
+M.util.init_block_hider(Y, {"id":"inst5","title":"Settings","preference":"block5hidden","tooltipVisible":"Hide Settings block","tooltipHidden":"Show Settings block"});
+
+});
+//]]>
+</script>
+
+
+<div id="dock" class="dock dock_left_vertical nothingdocked"><div id="yui_3_2_0_1_139081421899939" class="buttons_container"><div class="dockeditem_container"></div><div class="controls"><img src="cse220lab-01-sp13_1%20%20Assignment%20%20MyString_files/image.png" alt="Undock all" title="Undock all"></div></div></div><div style="display: none;"></div></body></html>
